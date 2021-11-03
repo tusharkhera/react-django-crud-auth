@@ -5,7 +5,7 @@ from rest_framework.authtoken.models import Token
 
 class UserSerializer(serializers.ModelSerializer) :
     class Meta :
-        mosel = User
+        model = User
         fields = ['id', 'username', 'password']
         extra_kwargs = {'password': {'write_only':True, 'required':True}}
 
