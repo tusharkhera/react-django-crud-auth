@@ -34,7 +34,7 @@ export default class Login extends Component {
     }
 
     register = event => {
-        fetch('http://127.0.0.1:8000/api/users/', {
+        fetch('http://127.0.0.1:8000/users/', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(this.state.credentials)
@@ -62,8 +62,8 @@ export default class Login extends Component {
                     <input type="password" name="password" value={this.state.credentials.password} onChange={this.inputChanged} />
                 </label>
                 <br />
-                <button onClick={this.login}>Submit</button>
-                <button onClick={this.register}>Submit</button>
+                <button onClick={this.login}>login</button>
+                <button onClick={this.register}>register</button>
             </>
         )
     }
